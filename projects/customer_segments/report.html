@@ -14164,12 +14164,10 @@ Displaying what multiple features are outliers for the the records above:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li><p>Advantages of K-Means $^{[2]}$:</p>
-<ul>
+<li>Advantages of K-Means $^{[2]}$:<ul>
 <li>Easy to implement </li>
 <li>With a large number of variables, K-Means may be computationally faster than hierarchical clustering (if K is small).</li>
 <li>k-Means may produce highter clusters than hierarchical clustering</li>
-<li>An instance can change cluster (move  to  another cluster) when the centroids are recomputed.</li>
 </ul>
 </li>
 <li><p>Advantages of Gaussian Mixture Model:</p>
@@ -14179,7 +14177,7 @@ Displaying what multiple features are outliers for the the records above:
 <li>Mixture modeling is very flexible.</li>
 </ul>
 </li>
-<li><p>From the scatteplot above there is no clear visible distinction between clusters and K-Means might struggle to cluster the data without a clear separation. The Gaussian Mixture Model, being a probabilistic model is better suited for this type of data.</p>
+<li><p>From the scatteplot above there is no neat cluster separation, for this reason K-Means might incorrectly cluster  data that has no clear separation. The Gaussian Mixture Model, being a probabilistic model is better suited for this type of data distribution.</p>
 </li>
 </ul>
 <p><strong>References:</strong></p>
@@ -14579,7 +14577,7 @@ Sample point 2 predicted to be in Cluster 0
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>Customers belonging to the <strong>Segment 1</strong> purchase a higher amount of fresh food which is more perishable and generally benefits from being purchased freshly and therefore more frequently. Customers belonging to the <strong>Segment 0</strong> on the other hand purchase products that are not highly perishable and as such might not find a reduction in delivery frequency a major problems. As such we have two type of customers who might have different needs when it comes to delivery frequency. The <strong>A/B tests</strong> could be conducted such so to be gathering separate feedbacks from the two groups. The result of such feedbacks might highlight how enstablishments belonging to <strong>Segment 0</strong> might well accept a change in frequency without causing them any particular problem. At the same time a separate <strong>A/B test</strong> conducted on enstablishments of <strong>Segment 1</strong> (Restaurants), might highlight how a reduced delivery frequency might cause some pain points to those customers.</li>
+<li>Customers belonging to the <strong>Segment 1</strong> purchase a higher amount of fresh food which is more perishable and generally benefits from being purchased freshly and therefore more frequently. Customers belonging to the <strong>Segment 0</strong> on the other hand purchase products that are not highly perishable and as such might not find a reduction in delivery frequency a major problems. As such we have two types of customers who might have different needs when it comes to delivery frequency. The <strong>A/B tests</strong> could be conducted such so to be gathering separate feedbacks from the two groups. The result of such feedbacks might highlight how enstablishments belonging to <strong>Segment 0</strong> might well accept a change in frequency without problems. At the same time a separate <strong>A/B test</strong> conducted on enstablishments of <strong>Segment 1</strong> (Restaurants), might highlight how a reduced delivery frequency might cause some pain points to those customers and should be more thoroughly considered whether to be introduced to this type of customers too.</li>
 </ul>
 
 </div>
@@ -14604,7 +14602,7 @@ Sample point 2 predicted to be in Cluster 0
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>The two <strong>Segment categories</strong> (Segment 0, Segment 1) derived from the clustering exercise (Unsupervised Learning) could be used as target labels in a Supervised learning exercise where the a new classification model (Decision Tree, SVM, Logistic Regression) is trained using the cluster classification as label data. Such model can then be used to predict new customers' category.</li>
+<li>The two segment categories (Segment 0, Segment 1) that have been derived from the clustering exercise (Unsupervised Learning) could be used as a mean of labelling the data in order to conduct a further Supervised learning exercise where the a classification model (Decision Tree, SVM, Logistic Regression) is created and trained using the cluster classification labelling acquired earlier on. Such model can then be used to predict what segment new customers belongs to based on their spending forecast.</li>
 </ul>
 
 </div>
@@ -14675,9 +14673,9 @@ Sample point 2 predicted to be in Cluster 0
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>The 2 categories estimated at very the beginning, following by the clustering exercise which based on the silouette score suggested to split the data in 2 clusters, are now confirmed as valid. I predicted as Restaurant what it turns out to be 'Hotel/Restaurant/Cafe, so very close. I predicted as Supermarket/Convenient stores what is classified as Retail which is a broader category for Supermarket/Convenient stores. The clustering algorithm did a pretty a good job in separating the data point in two main groups which are very close to the real HoReCa / Reail groups, although the real groups have a less neat separation between them compared to the groups created by the clustering exercise.</li>
-<li>Customers in the region where the Dimension 1 is less than -2, regardless of Dimension 2 are certainly Hotel/Restaurant/Cafe, while in the region where Dimension 1 is greater than 2.5 and Dimension 2 is less than 0 are certainly Retailers.</li>
-<li>These classifications, as stated above, are not exactly the same but very close to the earlier definition of customer segments.</li>
+<li>The 2 categories estimated at very the beginning, following by the clustering exercise which, following the calculation of the silouette score, suggested to split the data in 2 clusters, seem to have been a valid clustering separation compared to the channel result displayed above. I classified as Restaurant what it turns out to be the 'Hotel/Restaurant/Cafe cluster. I predicted as Supermarket/Convenient stores what is more broadly classified as Retail. The clustering algorithm did a pretty a good job in separating the data point in two main groups which are very similar to the  HoReCa / Reail groups above, although it must be said that the real clustering have a less neat separation between the two clusters compared to the clusters created by the Gaussian Mixture model.</li>
+<li>Customers whose data point is in the region where the Dimension 1 is less than -2, regardless of Dimension 2 are certainly Hotel/Restaurant/Cafe, while in the region where Dimension 1 is greater than 2.5 and Dimension 2 is less than 0 are certainly Retailers.</li>
+<li>The new classifications is not exactly the same as the one predicted by the Gaussian Mixture model but it is very close to it validating the clustering result.</li>
 </ul>
 
 </div>
